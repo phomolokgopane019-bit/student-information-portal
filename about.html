@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About - Student Information Portal</title>
+
+    <style>
+
+        /* ==============================
+           GENERAL PAGE STYLING
+        ============================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+
+        /* ==============================
+           HEADER
+        ============================== */
+
+        header {
+            background-color: #12355b;
+            color: white;
+            padding: 25px 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+
+        /* ==============================
+           NAVIGATION
+        ============================== */
+
+        nav {
+            background-color: #0b2545;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #1d70a2;
+        }
+
+
+        /* ==============================
+           MAIN CONTENT
+        ============================== */
+
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+
+        /* ==============================
+           INTRODUCTION
+        ============================== */
+
+        .intro {
+            background-color: white;
+            padding: 35px;
+            margin-bottom: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .intro h2 {
+            color: #12355b;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+
+        /* ==============================
+           IMAGE SECTIONS
+        ============================== */
+
+        .students-image {
+            text-align: center;
+            margin: 35px 0;
+        }
+
+        .students-image img {
+            width: 100%;
+            max-width: 900px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* ==============================
+           CONTENT CARDS
+        ============================== */
+
+        .content-box {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .content-box h2 {
+            color: #12355b;
+            margin-bottom: 15px;
+            font-size: 25px;
+        }
+
+        .content-box p {
+            margin-bottom: 12px;
+        }
+
+        /* ==============================
+           TWO COLUMN SECTION
+        ============================== */
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .two-column .content-box {
+            margin-bottom: 0;
+        }
+
+
+        /* ==============================
+           LISTS
+        ============================== */
+
+        ul,
+        ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+
+        /* ==============================
+           CONTACT INFORMATION
+        ============================== */
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        .contact-label {
+            font-weight: bold;
+            color: #12355b;
+        }
+
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+            background-color: #0b2545;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+
+        /* ==============================
+           MOBILE RESPONSIVE DESIGN
+        ============================== */
+
+        @media (max-width: 768px) {
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                text-align: center;
+                border-bottom: 1px solid #23466b;
+            }
+
+            .intro {
+                padding: 25px;
+            }
+
+            .intro h2 {
+                font-size: 24px;
+            }
+
+            .students-image img {
+                height: 280px;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==============================
+         HEADER
+    ============================== -->
+
+    <header>
+
+        <h1>Department of Computer Science</h1>
+
+        <p>Student Information Portal</p>
+
+        <!-- Navigation Menu -->
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="modules.html">Modules</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==============================
+         MAIN CONTENT
+    ============================== -->
+
+    <main>
+
+
+        <!-- Introduction -->
+
+        <section class="intro">
+
+            <h2>About the Department</h2>
+
+            <p>
+                
+                This page provides information about our department,
+                its vision, mission, facilities, and student registration.
+            </p>
+
+        </section>
+
+
+        <!-- Students Image -->
+
+        <section class="students-image">
+
+            <img src="images/students.jpg"
+                 alt="Computer Science students studying together">
+
+        </section>
+
+
+        <!-- Department History -->
+
+        <section class="content-box history">
+
+            <h2>Department History</h2>
+
+            <p>
+                The Department of Computer Science at the University, housed within the School of Mathematical and Computer Sciences under the Faculty of Science and Agriculture, offers both undergraduate and postgraduate programmes that have evolved alongside the institution’s history since its founding in 1959.
+            </p>
+
+            <p>
+                As part of the largest school in the faculty, with over 2,000 students enrolled, the Department provides comprehensive training in core computing disciplines and fosters research in advanced fields such as artificial intelligence, natural language processing, wireless networks, and software engineering.
+            </p>
+
+            <p>
+                The SMCS supports student development through seven computer laboratories equipped with 486 computers and employs over 50 top - performing students via its Work Study Programme, ensuring graduates are multi-skilled and prepared for modern job market challenges.
+            </p>
+
+            <p>
+                It also hosts three centres of excellence — the Telkom Centre of Excellence for Speech Technology, the Centre for Mathematics Explorations, and the Statistical Consultancy Centre while boasting more than 45 highly qualified academics engaged in both theoretical and applied research.
+            </p>
+
+            <p>
+                Notably, in 2009, the Statistics and Operations Research Department partnered with Nelson Mandela Metropolitan University on an energy demand forecasting project funded by ESKOM, further cementing the school’s reputation as a hub of academic growth, technological innovation, and impactful research.
+            </p>
+
+        </section>
+
+
+        <!-- Hackathon Image -->
+
+        <section class="students-image">
+
+            <img src="images/hackathon.jpg"
+                 alt="Computer Science students collaborating">
+
+        </section>
+
+
+        <!-- Vision and Mission -->
+
+        <section class="two-column">
+
+            <div class="content-box">
+
+                <h2>Our Vision</h2>
+
+                <p>
+                    To become a leading department in computer science
+                    education, innovation, and technological development.
+                </p>
+
+            </div>
+
+
+            <div class="content-box">
+
+                <h2>Our Mission</h2>
+
+                <p>
+                    Our mission is to provide students with quality computer
+                    science education, practical skills, and knowledge that
+                    prepares them for further studies and careers in the
+                    technology industry.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Location -->
+
+        <section class="content-box">
+
+            <h2>Location</h2>
+
+            <p>
+                The Department of Computer Science is located on the university of Limpopo campus and is easily accessible to students.<br><br>
+
+                 Physical Address: Corner of R71 Tzaneen Road and University Street, Mankweng Township, Polokwane, Limpopo Province, 0727<br>
+                 Campus/Building: Turfloop Campus, Maths Building
+            </p>
+
+        </section>
+
+
+        <!-- Contact Information -->
+
+        <section class="content-box contact-info">
+
+            <h2>Contact Information</h2>
+
+            <p>
+                <span class="contact-label">Email:</span>
+                computersciences@myturf.ul.ac.za
+            </p>
+
+            <p>
+                <span class="contact-label">Phone:</span>
+                +27 60 620 1439
+            </p>
+
+            <p>
+                <span class="contact-label">Office:</span>
+                Maths Building
+            </p>
+
+        </section>
+
+
+        <!-- Department Facilities -->
+
+        <section class="content-box">
+
+            <h2>Department Facilities</h2>
+
+            <ul>
+
+                <li>Computer Laboratories</li>
+
+                <li>Student Study Areas</li>
+
+                <li>Computer Science Research Centre</li>
+
+                <li>Innovation and Technology Laboratory</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- Laboratory Image -->
+
+        <section class="students-image">
+
+            <img src="images/laboratory.jpg"
+                 alt="Computer Science laboratory">
+
+        </section>
+
+
+        <!-- Student Registration -->
+
+        <section class="content-box">
+
+            <h2>Student Registration Steps</h2>
+
+            <ol>
+
+                <li>Apply for admission to the university.</li>
+
+                <li>Receive and accept your admission offer.</li>
+
+                <li>Complete the required registration forms.</li>
+
+                <li>Submit the necessary documents.</li>
+
+                <li>Register for your Computer Science modules.</li>
+
+                
+
+            </ol>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Department of Computer Science.
+            All rights reserved
+        </p>
+
+        
+    <p>
+      <a href="https://www.ul.ac.za" target="_blank">University of Limpopo</a>
+    </p>
+    <p>
+      <strong>Email:</strong> <a href="mailto:info@cs.ul.ac.za">info@cs.ul.ac.za</a> | 
+      <strong>Phone:</strong> <a href="tel:+27152682000">+27 (0)15 268 2000</a>
+    </p></p>
+
+    </footer>
+
+
+</body>
+
+</html>n j

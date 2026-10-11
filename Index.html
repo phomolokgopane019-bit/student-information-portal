@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Information Portal</title>
+
+    <style>
+        /* ------------------------------
+           GENERAL PAGE STYLING
+        ------------------------------ */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+
+        /* ------------------------------
+           HEADER
+        ------------------------------ */
+
+        header {
+            background-color: #12355b;
+            color: white;
+            padding: 25px 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        header h2 {
+            font-size: 20px;
+            font-weight: normal;
+            margin-bottom: 25px;
+        }
+
+
+        /* ------------------------------
+           NAVIGATION BAR
+        ------------------------------ */
+
+        nav {
+            background-color: #0b2545;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #1d70a2;
+        }
+
+
+        /* ------------------------------
+           HERO SECTION
+        ------------------------------ */
+
+        .hero {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h2 {
+            font-size: 36px;
+            color: #12355b;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .hero-image {
+            flex: 1;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* ------------------------------
+           CONTENT SECTIONS
+        ------------------------------ */
+
+        .content {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .content-box {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .content-box h2 {
+            color: #12355b;
+            margin-bottom: 15px;
+        }
+
+        .content-box p {
+            margin-bottom: 12px;
+        }
+
+
+        /* ------------------------------
+           SECOND IMAGE
+        ------------------------------ */
+
+        .department-image {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .department-image img {
+            width: 100%;
+            max-width: 900px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* ------------------------------
+           FOOTER
+        ------------------------------ */
+
+        footer {
+            background-color: #0b2545;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+
+        /* ------------------------------
+           MOBILE RESPONSIVE DESIGN
+        ------------------------------ */
+
+        @media (max-width: 768px) {
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            header h2 {
+                font-size: 18px;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                text-align: center;
+                border-bottom: 1px solid #23466b;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text h2 {
+                font-size: 28px;
+            }
+
+            .hero-image img {
+                max-height: 300px;
+            }
+
+            .department-image img {
+                height: 280px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
+    <header>
+
+        <h1>Department of Computer Science</h1>
+
+        <h2>Student Information Portal</h2>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="modules.html">Modules</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ==============================
+         MAIN CONTENT
+    =============================== -->
+
+    <main>
+
+        <!-- Hero Section -->
+
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <h2>Welcome to the Student Information Portal</h2>
+
+                <p>
+                    Welcome to the Department of Computer Science Student
+                    Information Portal. This website provides useful information
+                    for new and existing students in the department.
+                </p>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <img src="images/university.jpg"
+                     alt="University campus">
+
+            </div>
+
+        </section>
+
+
+        <!-- Department Description -->
+
+        <section class="content">
+
+            <div class="content-box">
+
+                <h2>Receive revolutionary greetings from the Department of Computer Sciences</h2>
+
+                <p>
+                    This department is centered around the context of education and training in the field of computer sciences.
+                     This discipline defines innovative individuals who seek solutions for real-world problems of the modern age
+                      through the use of technology. Our objective is to provide training and development to those who wish to advance 
+                      their problem-solving skills as well as to equip them with tools to approach real-world phenomena"
+                </p>
+
+                <p>
+                    This portal provides information about our department,
+                    academic programmes, modules, lecturers, and contact details.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Second Campus Image -->
+
+        <section class="department-image">
+
+            <img src="images/campus.jpg"
+                 alt="University campus">
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Department of Computer Science.
+            All rights reserved.
+        </p>
+
+        <p>
+      <a href="https://www.ul.ac.za" target="_blank">University of Limpopo</a>
+    </p>
+    <p>
+      <strong>Email:</strong> <a href="mailto:info@cs.ul.ac.za">info@cs.ul.ac.za</a> | 
+      <strong>Phone:</strong> <a href="tel:+27152682000">+27 (0)15 268 2000</a>
+    </p></p>
+
+
+    </footer>
+
+</body>
+
+</html>

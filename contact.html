@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact - Student Information Portal</title>
+
+    <style>
+
+        /* ==============================
+           GENERAL PAGE STYLING
+        ============================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+
+        /* ==============================
+           HEADER
+        ============================== */
+
+        header {
+            background-color: #12355b;
+            color: white;
+            padding: 25px 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+
+        /* ==============================
+           NAVIGATION
+        ============================== */
+
+        nav {
+            background-color: #0b2545;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #1d70a2;
+        }
+
+
+        /* ==============================
+           MAIN CONTENT
+        ============================== */
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+
+        /* ==============================
+           INTRODUCTION
+        ============================== */
+
+        .intro {
+            text-align: center;
+            background-color: white;
+            padding: 35px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .intro h2 {
+            color: #12355b;
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+
+        /* ==============================
+           CONTACT FORM
+        ============================== */
+
+        .form-container {
+            background-color: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-container h2 {
+            color: #12355b;
+            margin-bottom: 20px;
+        }
+
+        form {
+            width: 100%;
+        }
+
+
+        /* ==============================
+           FORM LABELS
+        ============================== */
+
+        label {
+            display: block;
+            margin-top: 18px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #12355b;
+        }
+
+
+        /* ==============================
+           FORM INPUTS
+        ============================== */
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccd6e0;
+            border-radius: 7px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            background-color: #fafcfe;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #1d70a2;
+            box-shadow: 0 0 0 2px rgba(29, 112, 162, 0.15);
+        }
+
+        textarea {
+            height: 140px;
+            resize: vertical;
+        }
+
+
+        /* ==============================
+           RADIO BUTTONS
+        ============================== */
+
+        .radio-group {
+            display: flex;
+            gap: 25px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-weight: normal;
+            margin-top: 0;
+            color: #333;
+        }
+
+        .radio-option input {
+            width: auto;
+        }
+
+
+        /* ==============================
+           BUTTONS
+        ============================== */
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 7px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"] {
+            background-color: #12355b;
+            color: white;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #1d70a2;
+        }
+
+        button[type="reset"] {
+            background-color: #e1e6eb;
+            color: #333;
+        }
+
+        button[type="reset"]:hover {
+            background-color: #cbd3da;
+        }
+
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+            background-color: #0b2545;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+
+        /* ==============================
+           MOBILE RESPONSIVE DESIGN
+        ============================== */
+
+        @media (max-width: 768px) {
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                text-align: center;
+                border-bottom: 1px solid #23466b;
+            }
+
+            .intro {
+                padding: 25px;
+            }
+
+            .intro h2 {
+                font-size: 24px;
+            }
+
+            .form-container {
+                padding: 25px;
+            }
+
+            .radio-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==============================
+         HEADER
+    ============================== -->
+
+    <header>
+
+        <h1>Department of Computer Science</h1>
+
+        <p>Student Information Portal</p>
+
+        <!-- Navigation Menu -->
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="modules.html">Modules</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==============================
+         MAIN CONTENT
+    ============================== -->
+
+    <main>
+
+
+        <!-- Introduction -->
+
+        <section class="intro">
+
+            <h2>Contact the Department</h2>
+
+            <p>
+                If you have any questions or enquiries, please complete
+                the form below and provide the required information.
+            </p>
+
+        </section>
+
+
+        <!-- Contact Form -->
+
+        <section class="form-container">
+
+            <h2>Send Us an Enquiry</h2>
+
+            <form>
+
+
+                <!-- First Name -->
+
+                <label for="firstname">
+                    First Name:
+                </label>
+
+                <input
+                    type="text"
+                    id="firstname"
+                    name="firstname"
+                    placeholder="Enter your first name"
+                >
+
+
+                <!-- Surname -->
+
+                <label for="surname">
+                    Surname:
+                </label>
+
+                <input
+                    type="text"
+                    id="surname"
+                    name="surname"
+                    placeholder="Enter your surname"
+                >
+
+
+                <!-- Email -->
+
+                <label for="email">
+                    Email:
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                >
+
+
+                <!-- Student Number -->
+
+                <label for="studentnumber">
+                    Student Number:
+                </label>
+
+                <input
+                    type="text"
+                    id="studentnumber"
+                    name="studentnumber"
+                    placeholder="Enter your student number"
+                >
+
+
+                <!-- Enquiry Type -->
+
+                <label for="enquiry">
+                    Enquiry Type:
+                </label>
+
+                <select id="enquiry" name="enquiry">
+
+                    <option value="general">
+                        General Enquiry
+                    </option>
+
+                    <option value="programme">
+                        Programme Information
+                    </option>
+
+                    <option value="registration">
+                        Registration
+                    </option>
+
+                    <option value="technical">
+                        Technical Support
+                    </option>
+
+                    <option value="other">
+                        Other
+                    </option>
+
+                </select>
+
+
+                <!-- Message -->
+
+                <label for="message">
+                    Message:
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Type your message here..."
+                ></textarea>
+
+
+                <!-- Preferred Contact Method -->
+
+                <label>
+                    Preferred Contact Method:
+                </label>
+
+                <div class="radio-group">
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="contact"
+                            value="email"
+                        >
+
+                        Email
+
+                    </label>
+
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="contact"
+                            value="phone"
+                        >
+
+                        Phone
+
+                    </label>
+
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="contact"
+                            value="sms"
+                        >
+
+                        SMS
+
+                    </label>
+
+                </div>
+
+
+                <!-- Buttons -->
+
+                <div class="buttons">
+
+                    <button type="submit">
+                        Submit
+                    </button>
+
+                    <button type="reset">
+                        Reset
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Department of Computer Science.
+            All rights reserved.
+        </p>
+
+        <p>
+      <a href="https://www.ul.ac.za" target="_blank">University of Limpopo</a>
+    </p>
+    <p>
+      <strong>Email:</strong> <a href="mailto:info@cs.ul.ac.za">info@cs.ul.ac.za</a> | 
+      <strong>Phone:</strong> <a href="tel:+27152682000">+27 (0)15 268 2000</a>
+    </p></p>
+
+
+    </footer>
+
+
+</body>
+
+</html>
